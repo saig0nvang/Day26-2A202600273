@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Report - Lab 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        @page {
+            size: 1920px 1080px; /* 16:9 Landscape */
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #333;
+            color: #333;
+        }
+
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            background-color: #ffffff;
+            page-break-after: always;
+            position: relative;
+            box-sizing: border-box;
+            padding: 80px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto 20px auto; /* Margin for screen viewing */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        @media print {
+            body { background-color: #fff; }
+            .slide { margin: 0; box-shadow: none; }
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #1a73e8;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 42px;
+            color: #202124;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #1a73e8;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 32px;
+            color: #1a73e8;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p, li {
+            font-size: 26px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        th, td {
+            border: 2px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #202124;
+        }
+
+        .content-wrap {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+        }
+
+        .col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-container {
+            flex: 1;
+            background-color: #f1f3f4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #e8eaed;
+            margin-bottom: 15px;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 20px;
+            color: #5f6368;
+            font-style: italic;
+        }
+        
+        .title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eaed 100%);
+        }
+
+        .title-slide h1 {
+            font-size: 72px;
+            margin-bottom: 40px;
+        }
+
+        .title-slide .authors {
+            font-size: 36px;
+            color: #5f6368;
+            margin-top: 60px;
+        }
+
+        .highlight {
+            background-color: #e8f0fe;
+            padding: 20px;
+            border-left: 6px solid #1a73e8;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Title -->
+    <div class="slide title-slide">
+        <h1>Phân tích Sản phẩm AI<br>Gemini vs ChatGPT trong Nghiên cứu Học thuật</h1>
+        <div class="authors">
+            <p><strong>Ngành chọn:</strong> A — Tìm kiếm</p>
+            <br><br>
+            <p><strong>Nhóm thực hiện:</strong></p>
+            <p>Phạm Việt Anh (2A202600273) & Hoàng Đức Nghĩa (2A202600371)</p>
+            <p><em>Day 26 - AI Product Strategy</em></p>
+        </div>
+    </div>
+
+    <!-- Slide 2: S1 -->
+    <div class="slide">
+        <h2>S1 — PRODUCT MOMENT</h2>
+        <div class="content-wrap">
+            <div class="col">
+                <table>
+                    <tr>
+                        <th>Yếu tố</th>
+                        <th>Sản phẩm A: Gemini</th>
+                        <th>Sản phẩm B: ChatGPT</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Entry point</strong></td>
+                        <td>Giao diện chat tích hợp hệ sinh thái Google</td>
+                        <td>Giao diện chat tối giản, tập trung vào text</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ý định user</strong></td>
+                        <td>Tìm kiếm thông tin nhanh, cập nhật từ Google</td>
+                        <td>Tổng hợp, phân tích sâu và tra cứu có nguồn</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Surface chính</strong></td>
+                        <td>Web Chat interface</td>
+                        <td>Web Chat interface</td>
+                    </tr>
+                </table>
+                <div class="highlight">
+                    <strong>Nhiệm vụ chung:</strong><br>
+                    So sánh khả năng tìm kiếm, tổng hợp 5 số liệu/sự kiện có dẫn nguồn phục vụ nghiên cứu học thuật. Đánh giá rủi ro và rút ra kết luận.
+                </div>
+                <p><strong>Nhận định:</strong> Cả 2 đều dùng chat interface làm điểm chạm đầu tiên. Gemini cá nhân hóa hiển thị nhờ tài khoản Google, trong khi ChatGPT tập trung thuần túy vào prompt.</p>
+            </div>
+            <div class="col">
+                <div class="img-container">
+                    <img src="screenshots/product-A-1-entry.png" alt="Gemini Entry">
+                </div>
+                <div class="img-caption">Ảnh: Giao diện ban đầu của Gemini</div>
+                <div class="img-container">
+                    <img src="screenshots/product-B-1-entry.png" alt="ChatGPT Entry">
+                </div>
+                <div class="img-caption">Ảnh: Giao diện ban đầu của ChatGPT</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: S2 -->
+    <div class="slide">
+        <h2>S2 — WORKFLOW EVIDENCE</h2>
+        <div class="content-wrap">
+            <div class="col" style="flex: 1.2;">
+                <h3>2.1. Luồng người dùng (User Flow)</h3>
+                <ul>
+                    <li><strong>TRƯỚC:</strong> Tìm kiếm thủ công qua nhiều tab Google Search.</li>
+                    <li><strong>TRONG (Gemini):</strong> Nhập prompt → Xử lý nội bộ → Text output.</li>
+                    <li><strong>TRONG (ChatGPT):</strong> Nhập prompt → Kích hoạt Web Search → Tổng hợp → Trả kết quả + citation.</li>
+                    <li><strong>SAU:</strong> Đọc kết quả, kiểm tra nguồn dẫn và copy vào báo cáo.</li>
+                </ul>
+
+                <h3>2.2. Vùng ma sát (Friction Areas)</h3>
+                <ul>
+                    <li><strong>Physical load:</strong> Thấp (1 click gửi). ChatGPT tiện hơn vì có citation click trực tiếp.</li>
+                    <li><strong>Cognitive burden:</strong> Thấp. Không cần kỹ năng prompt phức tạp.</li>
+                    <li><strong>User workarounds:</strong> Với Gemini, user phải dùng nút "G" (Double-check response) để verify nguồn thay vì có sẵn link trên text như ChatGPT.</li>
+                </ul>
+                <div class="highlight">
+                    <strong>Nhận định:</strong> ChatGPT giảm friction cho tác vụ "nghiên cứu" tốt hơn nhờ luồng trích dẫn (citation) trực tiếp, minh bạch.
+                </div>
+            </div>
+            <div class="col" style="flex: 0.8;">
+                <div class="img-container">
+                    <img src="screenshots/product-A-2-input.png" alt="Gemini Input">
+                </div>
+                <div class="img-caption">Ảnh: Prompt đầu vào của Gemini</div>
+                <div class="img-container">
+                    <img src="screenshots/product-B-3-output.png" alt="ChatGPT Output">
+                </div>
+                <div class="img-caption">Ảnh: Kết quả đầu ra của ChatGPT</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: S3 -->
+    <div class="slide">
+        <h2>S3 — OUTPUT & TRUST</h2>
+        <div class="content-wrap">
+            <div class="col">
+                <h3>3.1. Bảng 6 tín hiệu đáng tin</h3>
+                <table>
+                    <tr>
+                        <th>Tín hiệu</th>
+                        <th>Gemini (A)</th>
+                        <th>ChatGPT (B)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Citation (Dẫn nguồn)</strong></td>
+                        <td>Yếu (Phải ấn Double-check)</td>
+                        <td>Tốt (Citations inline)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control (Sửa đổi)</strong></td>
+                        <td>Có (Modify response, drafts)</td>
+                        <td>Có (Edit prompt)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Confidence indicator</strong></td>
+                        <td>Có (Google verification)</td>
+                        <td>Không rõ ràng</td>
+                    </tr>
+                </table>
+                <div class="highlight">
+                    <strong>Nhận định:</strong> Về độ tin cậy, ChatGPT vượt trội nhờ khả năng trích dẫn nguồn minh bạch (số [1], [2] bấm vào được) - Yếu tố sống còn trong học thuật. Gemini dù sinh chữ nhanh nhưng tính "hộp đen" cao.
+                </div>
+            </div>
+            <div class="col">
+                <div class="img-container">
+                    <img src="screenshots/product-A-3-output.png" alt="Gemini Output">
+                </div>
+                <div class="img-caption">Ảnh: Kết quả của Gemini (Thiếu citation cụ thể)</div>
+                <div class="img-container">
+                    <img src="screenshots/product-B-4-source.png" alt="ChatGPT Source">
+                </div>
+                <div class="img-caption">Ảnh: ChatGPT hiển thị rõ danh sách nguồn tham khảo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: S4 -->
+    <div class="slide">
+        <h2>S4 — BUSINESS SIGNAL</h2>
+        <div class="content-wrap">
+            <div class="col">
+                <h3>4.1. Mô hình giá & Cost-Capability-Speed</h3>
+                <table>
+                    <tr>
+                        <th>Yếu tố</th>
+                        <th>Gemini (A)</th>
+                        <th>ChatGPT (B)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Gói miễn phí</strong></td>
+                        <td>Có (Flash/Pro)</td>
+                        <td>Có (GPT-4o mini / GPT-4o giới hạn)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Giá thấp nhất</strong></td>
+                        <td>$20/tháng (Advanced)</td>
+                        <td>$20/tháng (Plus)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quota / Limit</strong></td>
+                        <td>Rộng rãi ở bản free</td>
+                        <td>Giới hạn tin nhắn GPT-4o</td>
+                    </tr>
+                </table>
+                <ul>
+                    <li><strong>Gemini:</strong> COST $0 / CAPABILITY Tra cứu siêu nhanh / SPEED Cực cao.</li>
+                    <li><strong>ChatGPT:</strong> COST $0 (có giới hạn) / CAPABILITY Suy luận, trích dẫn tốt / SPEED Trung bình.</li>
+                </ul>
+                <div class="highlight">
+                    <strong>Nhận định:</strong> ChatGPT có sức mạnh định giá (Pricing Power) tốt hơn vì giới hạn model xịn để ép mua gói Plus. Gemini tận dụng lợi thế phân phối (Distribution) từ hệ sinh thái Google.
+                </div>
+            </div>
+            <div class="col">
+                <div class="img-container">
+                    <img src="screenshots/product-A-5-pricing.png" alt="Gemini Pricing">
+                </div>
+                <div class="img-caption">Ảnh: Bảng giá Gemini</div>
+                <div class="img-container">
+                    <img src="screenshots/product-B-5-pricing.png" alt="ChatGPT Pricing">
+                </div>
+                <div class="img-caption">Ảnh: Bảng giá ChatGPT</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: S5.1 - S5.4 -->
+    <div class="slide">
+        <h2>S5 — PRODUCT JUDGMENT (Phần 1)</h2>
+        <div class="content-wrap">
+            <div class="col">
+                <h3>5.1. Verdict tóm tắt</h3>
+                <ul>
+                    <li><strong>Gemini: PROMISING.</strong> Tốc độ vô địch, hệ sinh thái Google khổng lồ, nhưng thiếu tính chuyên sâu về hiển thị trích dẫn học thuật minh bạch.</li>
+                    <li><strong>ChatGPT: STRONG.</strong> Khả năng lập luận sâu, cite nguồn tốt biến nó thành trợ lý nghiên cứu học thuật mạnh mẽ.</li>
+                </ul>
+
+                <h3>5.4. Moat phân tích (Lợi thế cạnh tranh)</h3>
+                <table>
+                    <tr>
+                        <th>Loại Moat</th>
+                        <th>Gemini (A)</th>
+                        <th>ChatGPT (B)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Moat chủ đạo</strong></td>
+                        <td><strong>Distribution</strong> (Mặc định trên Android, Chrome, Workspace)</td>
+                        <td><strong>Brand & Network</strong> (Đồng nghĩa với AI, word-of-mouth)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rủi ro</strong></td>
+                        <td>Tự triệt tiêu (Cannibalize) chính Google Search</td>
+                        <td>Phụ thuộc chi phí compute lớn</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: S5.5 - S5.8 -->
+    <div class="slide">
+        <h2>S5 — PRODUCT JUDGMENT (Phần 2)</h2>
+        <div class="content-wrap">
+            <div class="col">
+                <h3>5.5. Data Flywheel & 5.6. Niche Down</h3>
+                <ul>
+                    <li><strong>Gemini Flywheel:</strong> Tích hợp Gmail, Docs. Càng dùng, Google càng hiểu ngữ cảnh cá nhân.</li>
+                    <li><strong>ChatGPT Flywheel:</strong> Hàng trăm triệu session mỗi ngày liên tục train RLHF cho model.</li>
+                    <li><strong>Niche Down:</strong> Cả hai đều là <strong>General-purpose</strong> (thiếu niche rõ ràng). User Alignment của ChatGPT cao hơn vì trả lời đúng trọng tâm học thuật, ít "văn mẫu" hơn Gemini.</li>
+                </ul>
+
+                <h3>5.7. Spark → Loop → System</h3>
+                <ul>
+                    <li><strong>Gemini:</strong> Đang ở giai đoạn <strong>LOOP</strong> (user quay lại vì tiện lợi, miễn phí).</li>
+                    <li><strong>ChatGPT:</strong> Đang dịch chuyển lên <strong>SYSTEM</strong> (trở thành công cụ làm việc mặc định hàng ngày của giới học thuật).</li>
+                </ul>
+
+                <div class="highlight">
+                    <h3>5.8. Liên hệ Lab 1 (Case Jasper AI)</h3>
+                    <strong>Rủi ro Disruption:</strong> Nếu Jasper AI ở Lab 1 sụp đổ vì làm "AI wrapper", thì Gemini/ChatGPT chính là kẻ hủy diệt. Tuy nhiên, nếu cả hai không cải thiện độ chính xác 100% (hallucination) và nguồn Peer-reviewed uy tín, chúng sẽ bị các Vertical AI ngách như <strong>Perplexity</strong> hay <strong>Consensus</strong> đánh bật khỏi môi trường học thuật chuyên sâu.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
